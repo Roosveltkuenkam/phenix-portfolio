@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHENIX ART DESIGN - Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Leaflet CSS (for Map) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#main-nav">
+
+    <!-- Header -->
+    <header id="main-header" class="fixed-top">
+        <nav id="main-nav" class="navbar navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#hero">
+                    <img src="img/logo_btp.png" alt="PHENIX ART DESIGN Logo" class="logo-img mb-2">
+                    <span>PHENIX <span class="fw-light">ART DESIGN</span></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="#about">À Propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item ms-md-3"><a href="#contact" class="btn btn-devis">Devis</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section d-flex align-items-center justify-content-center text-white text-center">
+            <div class="hero-overlay"></div>
+            <div class="container position-relative z-1">
+                <h1 class="display-3 fw-bold">L'ESPRIT ET LE GOÛT DE L'ARCHITECTURE</h1>
+                <p class="lead my-4 mx-auto">PHENIX ART DESIGN - La nouvelle figure de la décoration intérieure</p>
+                <a href="#contact" class="btn btn-gold btn-lg">Concrétiser vos rêves</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-5 bg-white">
+            <div class="container py-md-5">
+                <div class="row g-5 g-lg-6 align-items-center">
+                    <div class="col-md-6">
+                        <div class="owner-card">
+                            <img src="img/roosvelt.jpg" alt="Portrait du directeur" class="img-fluid">
+                            <div class="owner-card-overlay">
+                                <p class="mb-1">Directeur & Designer Principal</p>
+                                <h3 class="h2 fw-bold">Patrick T.</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="section-subtitle">Bienvenue</h2>
+                        <p class="section-title-light">Nous concrétisons vos rêves de maison <span class="fw-semibold text-charcoal">très individuelle</span>.</p>
+                        <p class="text-secondary">C’est l’avantage de faire appel à PHENIX ART DESIGN où chaque projet est le fruit d’une concertation étroite qui, tout au long des travaux, débouchera sur une construction unique.</p>
+                        <div class="mt-5">
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="icon-wrapper text-gold me-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"></path></svg></div>
+                                <div>
+                                    <h3 class="h5 fw-semibold">Personnalisation</h3>
+                                    <p class="text-secondary mb-0">Un travail de co-conception pour élaborer vos plans. Vos idées et notre savoir-faire pour une maison esthétique.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="icon-wrapper text-gold me-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286Z"></path></svg></div>
+                                <div>
+                                    <h3 class="h5 fw-semibold">Qualité & Sérénité</h3>
+                                    <p class="text-secondary mb-0">Notre objectif est de vous proposer le meilleur, pour une maison saine, sûre, et confortable. Reposez-vous sur un partenaire solide.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section id="services" class="py-5 bg-cream">
+            <div class="container py-md-5 text-center">
+                <h2 class="section-subtitle">Nos Prestations</h2>
+                <p class="section-title-light mx-auto" style="max-width: 600px;">Un savoir-faire complet pour des projets uniques</p>
+                <div class="row g-4 mt-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="icon-wrapper-lg text-gold mb-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"></path></svg></div>
+                            <h3 class="h5 fw-semibold mb-2">Conception & Réalisation</h3>
+                            <p class="text-secondary">De l’esquisse à la remise des clés, nous gérons votre projet de A à Z avec un suivi rigoureux.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="icon-wrapper-lg text-gold mb-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"></path></svg></div>
+                            <h3 class="h5 fw-semibold mb-2">Décoration Intérieure</h3>
+                            <p class="text-secondary">Création d’espaces chaleureux et conviviaux qui reflètent votre personnalité et style de vie.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="icon-wrapper-lg text-gold mb-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"></path></svg></div>
+                            <h3 class="h5 fw-semibold mb-2">Plafonds en Plâtre (Staff)</h3>
+                            <p class="text-secondary">Solutions originales et sur mesure pour des plafonds design qui transforment vos pièces.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="icon-wrapper-lg text-gold mb-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125Z"></path></svg></div>
+                            <h3 class="h5 fw-semibold mb-2">Sols en 3 Dimensions (3D)</h3>
+                            <p class="text-secondary">Des revêtements de sol uniques et spectaculaires avec des produits spécifiques et adaptés.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                             <div class="icon-wrapper-lg text-gold mb-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.75v5.25a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18V5.25A2.25 2.25 0 0 1 5.25 3h6.75a2.25 2.25 0 0 1 2.25 2.25v3.75m0 0h-1.5m1.5 0v-3.75m0 3.75v3.75m-7.5-3.75h1.5m-1.5 0v3.75m-1.5 0h1.5m-1.5 0v3.75m1.5 0v-3.75m-7.5 0h1.5m-1.5 0v3.75M3 12h18"></path></svg></div>
+                            <h3 class="h5 fw-semibold mb-2">Rénovation & Aménagement</h3>
+                            <p class="text-secondary">Que vous soyez particulier ou professionnel, nous rénovons et aménageons tout type d’espace.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-card">
+                            <div class="icon-wrapper-lg text-gold mb-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.056 3 12s4.03 8.25 9 8.25Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 12.75h.007v.008H12v-.008Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 12.75h.007v.008H7.5v-.008Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75h.007v.008H16.5v-.008Z"></path></svg></div>
+                            <h3 class="h5 fw-semibold mb-2">Conseil & Accompagnement</h3>
+                            <p class="text-secondary">Notre technico-commercial vous conseille efficacement pour vous aider à visualiser le rendu final.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-5 bg-white">
+            <div class="container py-md-5 text-center">
+                <h2 class="section-subtitle">Portfolio</h2>
+                <p class="section-title-light mx-auto" style="max-width: 600px;">Notre Collection "Haute Construction"</p>
+                <div class="portfolio-grid mt-5">
+                    <div class="portfolio-item tall" data-bs-toggle="modal" data-bs-target="#portfolioModal" 
+                         data-title="Complexe de 6 Duplex"
+                         data-category="Construction Neuve"
+                         data-description="Cette villa moderne a été conçue pour maximiser la lumière naturelle et offrir des espaces de vie ouverts. Le défi principal était d'intégrer la structure dans son environnement naturel sans le perturber."
+                         data-details='{"Année": "2023", "Lieu": "Emana Yaounde"}'
+                         data-steps='{
+  "Fondation": ["img/projet1/fondation1.jpg", "img/projet1/fondation2.jpg", "img/projet1/fondation3.jpg", "img/projet1/fondation4.jpg"],
+  "Élévation": ["img/projet1/elevations1.jpg", "img/projet1/elevation2.jpg", "img/projet1/elevation3.jpg", "img/projet1/elevation4.jpg", "img/projet1/elevation5.jpg", "img/projet1/elevation6.jpg", "img/projet1/elevation7.jpg", "img/projet1/elevation8.jpg", "img/projet1/elevation9.jpg", "img/projet1/elevation10.jpg"],
+  "crepissage": ["img/projet1/crepissage1.jpg", "img/projet1/crepissage2.jpg", "img/projet1/crepissage3.jpg", "img/projet1/crepissage4.jpg"],
+  "cour": ["img/projet1/cour1.jpg", "img/projet1/cour2.jpg", "img/projet1/cour3.jpg"],
+  "vue de haut": ["img/projet1/vueHaut1.jpg", "img/projet1/vueHaut2.jpg", "img/projet1/vueHaut3.jpg", "img/projet1/vueHaut4.jpg"],
+  "Finition": ["img/projet1/projet_final.jpg","img/projet1/finition1.png", "img/projet1/finition2.png"]
+}'>
+                        <img src="img/projet1/projet_final.jpg" alt="Villa Contemporaine">
+                        <div class="portfolio-overlay"><h3>Construction d'un complexe de 6 Duplex</h3><p>Construction Neuve</p></div>
+                    </div>
+                    <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                         data-title="Loft Industriel"
+                         data-category="Rénovation"
+                         data-description="Transformation d'un ancien entrepôt en un loft résidentiel spacieux. L'accent a été mis sur la conservation des éléments industriels d'origine tout en introduisant un confort moderne."
+                         data-details='{"Année": "2022", "Lieu": "Lyon", "Client": "Particulier"}'
+                         data-steps='{
+  "Fondation": ["img/projet1/fondation1.jpg", "img/projet1/fondation2.jpg", "img/projet1/fondation3.jpg", "img/projet1/fondation4.jpg"],
+  "Élévation": ["img/projet1/elevations1.jpg", "img/projet1/elevation2.jpg", "img/projet1/elevation3.jpg", "img/projet1/elevation4.jpg", "img/projet1/elevation5.jpg", "img/projet1/elevation6.jpg", "img/projet1/elevation7.jpg", "img/projet1/elevation8.jpg", "img/projet1/elevation9.jpg", "img/projet1/elevation10.jpg"],
+  "cour": ["img/projet1/cour1.jpg", "img/projet1/cour2.jpg", "img/projet1/cour3.jpg"],
+  "crepissage": ["img/projet1/crepissage1.jpg", "img/projet1/crepissage2.jpg", "img/projet1/crepissage3.jpg", "img/projet1/crepissage4.jpg"],
+  "vue de haut": ["img/projet1/vueHaut1.jpg", "img/projet1/vueHaut2.jpg", "img/projet1/vueHaut3.jpg", "img/projet1/vueHaut4.jpg"],
+  "Finition": ["img/projet1/projet_final.jpg","img/projet1/finition1.png", "img/projet1/finition2.png"]
+}'>
+                        <img src="https://picsum.photos/seed/project2/800/600" alt="Loft Industriel">
+                        <div class="portfolio-overlay"><h3>Loft Industriel</h3><p>Rénovation</p></div>
+                    </div>
+                     <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                         data-title="Appartement Haussmannien"
+                         data-category="Décoration"
+                         data-images="https://picsum.photos/seed/p3a/1200/800,https://picsum.photos/seed/p3b/1200/800"
+                         data-description="Rafraîchissement complet de la décoration d'un appartement classique haussmannien. Le projet visait à marier le charme de l'ancien avec des touches de design contemporain."
+                         data-details='{"Année": "2024", "Lieu": "Paris 8e"}'>
+                        <img src="https://picsum.photos/seed/project3/800/600" alt="Appartement Haussmannien">
+                        <div class="portfolio-overlay"><h3>Appartement Haussmannien</h3><p>Décoration</p></div>
+                    </div>
+                    <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                         data-title="Maison en Bois"
+                         data-category="Construction Neuve"
+                         data-images="https://picsum.photos/seed/p4a/1200/800,https://picsum.photos/seed/p4b/1200/800,https://picsum.photos/seed/p4c/1200/800"
+                         data-description="Construction d'une maison familiale écologique en bois. Le design est inspiré des cabanes scandinaves avec de grandes ouvertures vers la forêt environnante."
+                         data-details='{"Année": "2023", "Lieu": "Annecy"}'>
+                        <img src="https://picsum.photos/seed/project4/800/600" alt="Maison en Bois">
+                        <div class="portfolio-overlay"><h3>Maison en Bois</h3><p>Construction Neuve</p></div>
+                    </div>
+                    <div class="portfolio-item tall" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                         data-title="Bureaux Modernes"
+                         data-category="Aménagement"
+                         data-images="https://picsum.photos/seed/p5a/1200/800,https://picsum.photos/seed/p5b/1200/800"
+                         data-description="Aménagement complet d'un plateau de bureaux pour une startup technologique. L'objectif était de créer un espace de travail flexible, collaboratif et inspirant."
+                         data-details='{"Année": "2024", "Lieu": "Lille", "Client": "Tech Innov"}'>
+                        <img src="https://picsum.photos/seed/project5/800/1200" alt="Bureaux Modernes">
+                        <div class="portfolio-overlay"><h3>Bureaux Modernes</h3><p>Aménagement</p></div>
+                    </div>
+                    <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#portfolioModal"
+                         data-title="Cuisine sur Mesure"
+                         data-category="Décoration"
+                         data-images="https://picsum.photos/seed/p6a/1200/800,https://picsum.photos/seed/p6b/1200/800,https://picsum.photos/seed/p6c/1200/800"
+                         data-description="Conception et installation d'une cuisine sur mesure avec un îlot central. Les matériaux choisis sont le chêne massif et le marbre de Carrare."
+                         data-details='{"Année": "2024", "Lieu": "Bordeaux"}'>
+                        <img src="https://picsum.photos/seed/project6/800/600" alt="Cuisine sur Mesure">
+                        <div class="portfolio-overlay"><h3>Cuisine sur Mesure</h3><p>Décoration</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="process-section py-5 text-center text-white">
+             <div class="process-overlay"></div>
+             <div class="container position-relative z-1 py-md-5">
+                <h2 class="display-6 fw-bold">Un Projet à Réaliser ?</h2>
+                <p class="lead mx-auto mt-3" style="max-width: 700px;">
+                    Nous concevons votre projet sous tous les angles. Laissez-nous tout ce que vous avez en tête. PHENIX s’occupe du reste et vous garantit une étude détaillée et personnalisée.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-5 bg-charcoal text-cream">
+            <div class="container py-md-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-subtitle text-cream-muted">Contact</h2>
+                    <p class="section-title-light text-cream mx-auto" style="max-width: 600px;">Prêt à commencer votre projet ?</p>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-7">
+                        <h3 class="font-display fw-bold mb-4">Envoyez-nous un message</h3>
+                        <form id="contactForm" action="#">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Votre Nom</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Votre Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Sujet</label>
+                                    <input type="text" class="form-control" id="subject" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Votre Message</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-gold btn-lg">Envoyer le Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-5">
+                        <h3 class="font-display fw-bold mb-4">Nos Coordonnées</h3>
+                        <div id="map"></div>
+                        <ul class="list-unstyled contact-details-list mt-4">
+                            <li><strong>Adresse :</strong> 123 Rue de l'Exemple, 75001 Paris, France</li>
+                            <li><strong>Téléphone :</strong> <a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+                            <li><strong>Email :</strong> <a href="mailto:contact@phenixartdesign.com">contact@phenixartdesign.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container text-center text-cream-muted">
+            <img src="img/logo_btp.png" alt="PHENIX ART DESIGN Logo" class="logo-img-footer mb-3">
+            <p class="mb-2">&copy; 2024 PHENIX ART DESIGN. Tous droits réservés.</p>
+            <div>
+                <a href="#">Facebook</a> &middot; 
+                <a href="#">Instagram</a> &middot; 
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer> 
+    <!-- Portfolio Modal -->
+    <div class="modal fade" id="portfolioModal" tabindex="-1" aria-labelledby="portfolioModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="portfolioModalLabel">Titre du Projet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div id="modalStepButtons" class="mb-3 d-flex flex-wrap gap-2"></div>
+                            <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <!-- Carousel items will be injected here by JavaScript -->
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-4 mt-lg-0">
+                            <h3 class="font-display fw-bold" id="modalProjectCategory">Catégorie</h3>
+                            <p id="modalProjectDescription">Description du projet...</p>
+                            <hr>
+                            <ul class="list-unstyled" id="modalProjectDetails">
+                                <!-- Details will be injected here -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Leaflet JS (for Map) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+<script type="module" src="/index.tsx"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("TON_USER_ID"); // Remplace par ton user_id EmailJS
+  })();
+</script>
+</body>
+</html>

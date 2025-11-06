@@ -1,0 +1,321 @@
+:root {
+  --bs-cream: #F8F7F4;
+  --bs-charcoal: #1a1a1a;
+  --bs-gold: #C0A062;
+  --bs-body-font-family: 'Montserrat', sans-serif;
+  --bs-body-color: var(--bs-charcoal);
+  --bs-body-bg: var(--bs-cream);
+}
+
+body {
+  scroll-padding-top: 80px; /* Offset for fixed header */
+}
+
+/* Typography */
+.font-display {
+  font-family: 'Poppins', sans-serif;
+}
+.display-3, .display-6, .section-title-light, .navbar-brand {
+  font-family: 'Poppins', sans-serif;
+}
+.section-subtitle {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #1a1a1a80;
+    margin-bottom: 0.5rem;
+}
+.section-title-light {
+    font-size: 2.25rem;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-top: 0.5rem;
+}
+
+/* Header */
+#main-header {
+    transition: all 0.3s ease-in-out;
+    height: 64px;
+}
+#main-header.scrolled {
+    background-color: rgba(248, 247, 244, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    min-height: 64px;
+    transition: padding 0.3s ease-in-out;
+}
+#main-header.scrolled .navbar {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--bs-charcoal);
+}
+.logo-img {
+    height: 48px;
+    width: auto;
+}
+.nav-link {
+    color: #1a1a1aB3;
+    font-weight: 500;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--bs-charcoal);
+}
+.btn-devis {
+    background-color: var(--bs-charcoal);
+    color: var(--bs-cream);
+    font-weight: bold;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50rem;
+    transition: all 0.3s ease;
+}
+.btn-devis:hover {
+    background-color: var(--bs-gold);
+    color: var(--bs-charcoal);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('https://picsum.photos/seed/arch/1920/1080') no-repeat center center/cover;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: var(--bs-charcoal);
+    opacity: 0.6;
+}
+.btn-gold {
+    background-color: var(--bs-gold);
+    color: var(--bs-charcoal);
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 50rem;
+    border: none;
+    transition: all 0.3s ease;
+}
+.btn-gold:hover {
+    background-color: var(--bs-cream);
+    color: var(--bs-charcoal);
+    transform: scale(1.05);
+}
+
+/* About Section */
+.icon-wrapper {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+}
+.owner-card {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.15);
+    min-height: 500px;
+}
+.owner-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.owner-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    color: white;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+.owner-card-overlay h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Services Section */
+.service-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+    border-color: var(--bs-gold);
+}
+.icon-wrapper-lg {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Portfolio Section */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    grid-auto-rows: 250px;
+}
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.portfolio-item.tall {
+    grid-row: span 2;
+}
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    color: white;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+.portfolio-overlay h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.portfolio-overlay p {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+/* Process Section */
+.process-section {
+    position: relative;
+    background: url('https://picsum.photos/seed/blueprint/1920/1080') no-repeat center center/cover;
+}
+.process-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: var(--bs-charcoal);
+    opacity: 0.9;
+}
+
+/* Contact & Footer */
+.bg-charcoal { background-color: var(--bs-charcoal) !important; }
+.text-cream { color: var(--bs-cream) !important; }
+.text-cream-muted { color: rgba(248, 247, 244, 0.6) !important; }
+
+footer {
+    background-color: var(--bs-charcoal);
+    border-top: 1px solid rgba(248, 247, 244, 0.1);
+}
+footer a {
+    color: rgba(248, 247, 244, 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: var(--bs-cream);
+}
+.logo-img-footer {
+    height: 80px;
+    width: auto;
+}
+
+/* Contact Section v2 */
+#contact .form-control {
+    background-color: rgba(248, 247, 244, 0.05);
+    border: 1px solid rgba(248, 247, 244, 0.2);
+    color: var(--bs-cream);
+}
+#contact .form-control:focus {
+    background-color: rgba(248, 247, 244, 0.1);
+    border-color: var(--bs-gold);
+    box-shadow: 0 0 0 0.25rem rgba(192, 160, 98, 0.25);
+    color: var(--bs-cream);
+}
+#contact .form-control::placeholder {
+    color: rgba(248, 247, 244, 0.4);
+}
+#map {
+    height: 300px;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(248, 247, 244, 0.2);
+}
+.contact-details-list {
+    list-style: none;
+    padding-left: 0;
+}
+.contact-details-list li {
+    margin-bottom: 0.75rem;
+    color: rgba(248, 247, 244, 0.8);
+}
+.contact-details-list a {
+    color: rgba(172, 147, 57, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.contact-details-list a:hover {
+    color: var(--bs-gold);
+}
+
+
+/* Portfolio Modal */
+.modal-content {
+    background-color: var(--bs-cream);
+    border: none;
+}
+.modal-header {
+    border-bottom: 1px solid #ddd;
+}
+.modal-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+#portfolioCarousel .carousel-inner {
+    border-radius: 0.5rem;
+}
+#portfolioCarousel .carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+#modalProjectDetails li {
+    padding: 0.25rem 0;
+}
+#modalProjectDetails li strong {
+    color: var(--bs-charcoal);
+    margin-right: 0.5rem;
+}
+#modalProjectDetails li span {
+    color: #6c757d;
+}
