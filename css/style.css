@@ -86,7 +86,7 @@ body {
 .hero-section {
     position: relative;
     height: 100vh;
-    background: url('https://picsum.photos/seed/arch/1920/1080') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
 }
 .hero-overlay {
     position: absolute;
@@ -318,4 +318,18 @@ footer a:hover {
 }
 #modalProjectDetails li span {
     color: #6c757d;
+}
+
+/* Descriptions sections (remplacement des styles inline) */
+.service-desc,
+.process-desc,
+.contact-desc {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.portfolio-desc {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
